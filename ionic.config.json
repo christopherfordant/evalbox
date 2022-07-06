@@ -1,0 +1,8 @@
+{
+  "name": "evalbox",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "03b5f2a6"
+}

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>{{ folder }}</ion-title>
+    <ion-title style="text-align :center">formulaire d'inscription</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -14,8 +14,27 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">{{ folder }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <form [formGroup]="RegisterForm">
+
+
+    <div class="inputfield">
+      <ion-input type="text" [ngModelOptions]="{standalone:true}" placeholder="Enter your email here"
+        [(ngModel)]="valuefromuser"></ion-input>
+
+
+      <ion-input type="text" [ngModelOptions]="{standalone:true}" placeholder="Enter your name" formControlName="name"
+        [(ngModel)]="valuefromuser"></ion-input>
+    </div>
+    <ion-button (click)="submit()">Submit</ion-button>
+    <ion-item>
+      <ion-label color="light">Email</ion-label>
+      <ion-input color="light" type="mail" placeholder="Adresse email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="light">Mot de passe</ion-label>
+      <ion-input color="light" type="password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+
+  </form>
 </ion-content>
